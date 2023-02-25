@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import getTime from "./services/getTime";
 
 export default function SearchBox() {
   const [valor, setValor] = useState("");
@@ -12,6 +13,15 @@ export default function SearchBox() {
   const botonClick = () => {
     setBoton(valor);
   };
+
+  const [tiempo, setTiempo] = useState([]);
+
+  useEffect(
+    function () {
+      getTime({ keyword: boton }).then((tiempo) => setTiempo(tiempo));
+    },
+    [boton]
+  );
 
   return (
     <div className="Search-box">
@@ -29,6 +39,7 @@ export default function SearchBox() {
         onClick={botonClick}
       ></button>
       <p>{boton}</p>
+      <p>{tiempo}</p>
     </div>
   );
 }
