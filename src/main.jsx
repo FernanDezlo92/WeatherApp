@@ -4,12 +4,12 @@ import App from "./App";
 import "./index.css";
 import WetherDetails from "./WeatherDetails";
 import SearchBox from "./SearchBox";
-import ObtenerApi from "./ObtenerApi";
+import Eltiempo from "./ElTiempo";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <WetherDetails />
     <SearchBox />
-    <ObtenerApi />
+    <Eltiempo />
   </React.StrictMode>
 );
