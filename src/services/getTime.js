@@ -6,8 +6,11 @@ export default function getTime({ keyword = {} }) {
     .then((res) => res.json())
     .then((response) => {
       const { weather = [] } = response;
+      const { main = {} } = response;
       const tiempo = weather.map((main) => main.main);
+      const { humidity } = main;
       console.log(tiempo);
-      return tiempo;
+      console.log(humidity);
+      return { tiempo, humidity };
     });
 }
