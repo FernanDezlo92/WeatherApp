@@ -21,7 +21,7 @@ export default function SearchBox(props) {
 
   return (
     <div className="Search-box">
-      <i className="fa-solid fa-location-dot"></i>
+      <i className="fa-solid fa-location-dot" id="dot"></i>
       <input
         type="text"
         placeholder="Escriba su localización"

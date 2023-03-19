@@ -7,10 +7,10 @@ export default function getTime({ keyword = {} }) {
     .then((response) => {
       const { weather = [] } = response;
       const { main = {} } = response;
+      const { wind = {} } = response;
       const tiempo = weather.map((main) => main.main);
+      const { speed } = wind;
       const { humidity } = main;
-      console.log(tiempo);
-      console.log(humidity);
-      return { tiempo, humidity };
+      return { tiempo, humidity, speed };
     });
 }

@@ -2,7 +2,6 @@ export default function WetherDetails(props) {
   return (
     <div className="Weather-details">
       <div className="tiempo">
-        <i className="fa-solid fa-sun"></i>
         <div className="text">
           <span></span>
           <p>{props.tiempo}</p>
@@ -12,14 +11,14 @@ export default function WetherDetails(props) {
         <i className="fa-solid fa-water"></i>
         <div className="text">
           <span></span>
-          <p>{props.humidity}</p>
+          <p>Humidity: {props.humidity}%</p>
         </div>
       </div>
       <div className="viento">
         <i className="fa-solid fa-wind"></i>
         <div className="text">
           <span></span>
-          <p>Viento</p>
+          <p>Wind: {props.viento} km/h</p>
         </div>
       </div>
     </div>
