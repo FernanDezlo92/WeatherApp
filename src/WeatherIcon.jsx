@@ -19,5 +19,9 @@ export default function WeatherIcon(props) {
     icon = <FaSnowflake />;
   }
 
-  return icon;
+  return (
+    <div className="iconTime">
+      <i>{icon}</i>
+    </div>
+  );
 }
