@@ -1,0 +1,12 @@
+/* posicionar la fecha en el top izquierdo */
+
+.fecha{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 2rem;
+    color: #f5f0f0;
+    text-align: left;
+    text-transform: capitalize;
+}	

@@ -5,9 +5,11 @@ import "./index.css";
 import WetherDetails from "./WeatherDetails";
 import SearchBox from "./SearchBox";
 import WeatherHolder from "./WeatherHolder";
+import FechaActual from "./getFecha";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <FechaActual />
     <WeatherHolder />
   </React.StrictMode>
 );

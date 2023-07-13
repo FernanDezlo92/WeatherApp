@@ -8,9 +8,11 @@ export default function getTime({ keyword = {} }) {
       const { weather = [] } = response;
       const { main = {} } = response;
       const { wind = {} } = response;
+      const { temp } = main;
       const tiempo = weather.map((main) => main.main);
       const { speed } = wind;
       const { humidity } = main;
-      return { tiempo, humidity, speed };
+      const temperature = Math.round(temp - 273.15) + "°C";
+      return { tiempo, humidity, speed, temperature };
     });
 }
